@@ -48,9 +48,25 @@ public class PayDay {
     * netPay = grossPay – deduction
     * return name, grossPay, deduction, netPay as String
      */
-    public String pay(String n, double rate, double worked, double deduct) {
-        return null;
+    public String pay(String n, double rate, double worked, double deduct)
+    {
+
+        double grossPay = rate * worked;
+        double deduction = grossPay * deduct;
+        double netpay = grossPay - deduction;
+
+        String sf1=String.format("%.2f", grossPay);
+        String sf2=String.format("%.2f", deduction);
+        String sf3=String.format("%.2f",netpay);
+
+        String answer = n + " " + sf1 + " " + sf2 + " " +  sf3;
+
+//"Kris 215.00 10.75 204.25"
+
+        return answer;
     }
+
+
 
 
     /**
